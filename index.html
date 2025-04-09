@@ -3,60 +3,69 @@
 <head>
   <title>Facil Tramites</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-image: linear-gradient(to bottom, #f7f7f7, #ffffff);
-      background-size: cover;
-      background-attachment: fixed;
+    /* Estilos para el logo y el encabezado */
+   .logo {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      border-radius: 50%;
+      background-color: #87CEEB;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      font-size: 24px;
+      font-family: 'Great Vibes', cursive;
     }
 
     header {
-      background-color: #3498db;
-      color: #fff;
+      background-color: #F7F7F7;
+      color: #333;
       padding: 20px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 36px;
-      font-weight: bold;
-      font-family: 'Great Vibes', cursive;
+    /* Estilos para el cuerpo de la página */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to bottom, #F7F7F7, #FFFFFF);
+      background-size: cover;
+      background-attachment: fixed;
     }
 
-    nav {
-      background-color: #333;
-      padding: 10px;
-      text-align: center;
+    /* Estilos para la imagen de fondo */
+    img {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-image: url('https://picsum.photos/300/200?blur');
     }
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    /* Estilos para el formulario */
+    form {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      margin: 0 auto;
     }
 
-    nav li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      color: #ccc;
-    }
-
+    /* Estilos para el contenido principal */
     main {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 20px;
+      background-color: #F7F7F7;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Estilos para los títulos y párrafos */
     main h2 {
       margin-bottom: 10px;
       font-size: 24px;
@@ -72,46 +81,14 @@
       width: 80%;
     }
 
-    img {
-      width: 300px;
-      height: 200px;
-      margin: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Estilos para los enlaces y botones */
+    a {
+      text-decoration: none;
+      color: #337ab7;
     }
 
-    form {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 500px;
-      margin: 0 auto;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input[type="text"], input[type="email"] {
-      width: 100%;
-      height: 30px;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    textarea {
-      width: 100%;
-      height: 50px;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    a:hover {
+      color: #23527c;
     }
 
     input[type="submit"] {
@@ -128,28 +105,6 @@
 
     input[type="submit"]:hover {
       background-color: #1abc9c;
-    }
-
-    select {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-   .logo {
-      width: 100px;
-      height: 100px;
-      margin: 20px;
-      border-radius: 50%;
-      background-color: #3498db;
-      color: #fff;
-      text-align: center;
-      line-height: 100px;
-      font-size: 24px;
-      font-family: 'Great Vibes', cursive;
     }
   </style>
 </head>
@@ -168,7 +123,7 @@
   <main>
     <h2>Bienvenido a Facil Tramites</h2>
     <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus solicitudes de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procedimientos.</p>
-    <img src="https://picsum.photos/300/200" alt="Imagen de personas felices con documentos en sus manos">
+    <img src="https://picsum.photos/300/200?blur" alt="Imagen de personas felices con documentos en sus manos">
     <p>Si necesitas ayuda con tus solicitudes, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
     <h2>Formulario de contacto</h2>
     <p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su solicitud.</p>
@@ -196,7 +151,7 @@
         <option value="cl" data-indicativo="+56">Chile</option>
       </select><br>
       <label>Número de celular:</label>
-      <input type="text" id="indicativo" readonly>
+      <input type="text" id="indicativo" readonly> 
       <input type="text" name="celular" id="celular" maxlength="10"><br>
       <label>Mensaje:</label>
       <textarea name="mensaje"></textarea><br>

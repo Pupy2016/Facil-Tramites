@@ -9,23 +9,60 @@
       background-color: #f2f2f2;
     }
 
-    h1 {
-      color: #00698f;
+    header {
+      background-color: #00698f;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      margin-bottom: 20px;
     }
 
-    h2 {
-      color: #666;
-      text-align: center;
-      margin-bottom: 20px;
+    header h1 {
+      margin: 0;
     }
 
-    p {
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    main h2 {
+      margin-bottom: 10px;
+    }
+
+    main p {
       font-size: 18px;
       color: #333;
       margin-bottom: 20px;
       text-align: justify;
+      width: 80%;
     }
 
     img {
@@ -34,15 +71,6 @@
       margin: 20px;
       border: 1px solid #ddd;
       border-radius: 10px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #00698f;
-    }
-
-    a:hover {
-      color: #003d5c;
     }
 
     form {
@@ -104,8 +132,18 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Bienvenido a Facil Tramites</h1>
+  <header>
+    <h1>Facil Tramites</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Bienvenido a Facil Tramites</h2>
     <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus solicitudes de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procedimientos.</p>
     <img src="https://picsum.photos/300/200" alt="Imagen de personas felices con documentos diligenciados">
     <p>Si necesitas ayuda con tus solicitudes, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
@@ -141,21 +179,19 @@
       <textarea name="mensaje"></textarea><br>
       <input type="submit" value="Enviar solicitud">
     </form>
-    <p>Estamos comprometidos con la calidad y la eficiencia en nuestros servicios. Nuestro equipo de expertos está siempre disponible para ayudarte con tus solicitudes.</p>
-    <p>Si tienes alguna pregunta o inquietud, no dudes en contactarnos. Estamos aquí para ayudarte.</p>
-    <script>
-      const paisSelect = document.getElementById('pais');
-      const indicativoInput = document.getElementById('indicativo');
-      const celularInput = document.getElementById('celular');
+  </main>
+  <script>
+    const paisSelect = document.getElementById('pais');
+    const indicativoInput = document.getElementById('indicativo');
+    const celularInput = document.getElementById('celular');
 
-      paisSelect.addEventListener('change', (e) => {
-        const paisSeleccionado = e.target.value;
-        const indicativo = e.target.options[e.target.selectedIndex].getAttribute('data-indicativo');
-        indicativoInput.value = indicativo;
-      });
+    paisSelect.addEventListener('change', (e) => {
+      const paisSeleccionado = e.target.value;
+      const indicativo = e.target.options[e.target.selectedIndex].getAttribute('data-indicativo');
+      indicativoInput.value = indicativo;
+    });
 
-      indicativoInput.value = paisSelect.options[paisSelect.selectedIndex].getAttribute('data-indicativo');
-    </script>
-  </div>
+    indicativoInput.value = paisSelect.options[paisSelect.selectedIndex].getAttribute('data-indicativo');
+  </script>
 </body>
 </html>

@@ -116,4 +116,24 @@
     </select><br><br>
     <label>Número de celular:</label>
     <input type="text" id="indicativo" readonly>
-    <input type="text" name="celular" id="celular" maxlength="10"><br><
+    <input type="text" name="celular" id="celular" maxlength="10"><br><br>
+    <label>Mensaje:</label>
+    <textarea name="mensaje"></textarea><br><br>
+    <input type="submit" value="Enviar mensaje">
+  </form>
+  <script>
+    const paisSelect = document.getElementById('pais');
+    const indicativoInput = document.getElementById('indicativo');
+    const celularInput = document.getElementById('celular');
+
+    paisSelect.addEventListener('change', (e) => {
+      const paisSeleccionado = e.target.value;
+      const indicativo = e.target.options[e.target.selectedIndex].getAttribute('data-indicativo');
+      indicativoInput.value = indicativo;
+    });
+
+    indicativoInput.value = paisSelect.options[paisSelect.selectedIndex].getAttribute('data-indicativo');
+  </script>
+</body>
+</html>
+

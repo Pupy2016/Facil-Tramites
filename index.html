@@ -1,3 +1,5 @@
+Aquí te dejo el código completo con todas las correcciones que hemos hecho:
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,34 +94,28 @@
   <p>En Facil Tramites, nos esforzamos por hacer que tus trámites en línea sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus trámites de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procesos burocráticos.</p>
   <img src="https://picsum.photos/200/300" alt="Logo de Facil Tramites">
   <p>Si necesitas ayuda con tus trámites, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
+  <h2>Formulario de contacto</h2>
+  <p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su trámite.</p>
   <form>
     <label>Nombre:</label>
     <input type="text" name="nombre"><br><br>
     <label>Correo electrónico:</label>
     <input type="email" name="correo"><br><br>
-    <label>Mensaje:</label>
-    <textarea name="mensaje"></textarea><br><br>
-    <input type="submit" value="Enviar mensaje">
-  </form>
-</body>
-</html>
-<form>
-  <label>Nombre:</label>
-  <input type="text" name="nombre"><br><br>
-  <label>Correo electrónico:</label>
-  <input type="email" name="correo"><br><br>
-  <label>Tipo de trámite:</label>
-  <select name="tramite">
-    <option value="tramite1">Trámite 1</option>
-    <option value="tramite2">Trámite 2</option>
-    <option value="tramite3">Trámite 3</option>
-  </select><br><br>
-  <label>Mensaje:</label>
-  <textarea name="mensaje"></textarea><br><br>
-  <input type="submit" value="Enviar mensaje">
-</form>
-<h2>Formulario de contacto</h2>
-<p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su trámite.</p>
-<form>
- ...
-</form>
+    <label>Tipo de trámite:</label>
+    <select name="tramite">
+      <option value="tramite1">Trámite 1</option>
+      <option value="tramite2">Trámite 2</option>
+      <option value="tramite3">Trámite 3</option>
+    </select><br><br>
+    <label>País:</label>
+    <select name="pais" id="pais">
+      <option value="mx" data-indicativo="+52">México</option>
+      <option value="us" data-indicativo="+1">Estados Unidos</option>
+      <option value="co" data-indicativo="+57">Colombia</option>
+      <option value="ar" data-indicativo="+54">Argentina</option>
+      <option value="cl" data-indicativo="+56">Chile</option>
+      <!-- Agrega más países según sea necesario -->
+    </select><br><br>
+    <label>Número de celular:</label>
+    <input type="text" id="indicativo" readonly>
+    <input type="text" name="celular" id="celular" maxlength="10"><br><

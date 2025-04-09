@@ -1,9 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Facil Tramites</title>
+  <title>Facil Tramites</title>
+  <style>
+    /* Aquí va el CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #00698f;
+      text-align: center;
+    }
+
+    h2 {
+      color: #666;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: 300px;
+      margin: 20px;
+      border: 1px solid #ddd;
+    }
+
+    a {
+      text-decoration: none;
+      color: #00698f;
+    }
+
+    a:hover {
+      color: #003d5c;
+    }
+
+    form {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      background-color: #00698f;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #003d5c;
+    }
+  </style>
 </head>
 <body>
- <h1>Bienvenido a Facil Tramites</h1>
+  <h1>Bienvenido a Facil Tramites</h1>
+  <h2>La forma fácil de realizar tus trámites en línea</h2>
+  <p>En Facil Tramites, nos esforzamos por hacer que tus trámites en línea sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus trámites de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procesos burocráticos.</p>
+  <img src="https://picsum.photos/200/300" alt="Logo de Facil Tramites">
+  <p>Si necesitas ayuda con tus trámites, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
+  <form>
+    <label>Nombre:</label>
+    <input type="text" name="nombre"><br><br>
+    <label>Correo electrónico:</label>
+    <input type="email" name="correo"><br><br>
+    <label>Mensaje:</label>
+    <textarea name="mensaje"></textarea><br><br>
+    <input type="submit" value="Enviar mensaje">
+  </form>
 </body>
 </html>

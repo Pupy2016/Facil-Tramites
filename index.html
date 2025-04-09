@@ -62,8 +62,8 @@
 
     input[type="text"], input[type="email"] {
       width: 100%;
-      height: 40px;
-      margin-bottom: 20px;
+      height: 30px;
+      margin-bottom: 10px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -71,8 +71,8 @@
 
     textarea {
       width: 100%;
-      height: 100px;
-      margin-bottom: 20px;
+      height: 50px;
+      margin-bottom: 10px;
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -80,7 +80,7 @@
 
     input[type="submit"] {
       width: 100%;
-      height: 40px;
+      height: 30px;
       background-color: #00698f;
       color: #fff;
       padding: 10px;
@@ -92,28 +92,38 @@
     input[type="submit"]:hover {
       background-color: #003d5c;
     }
+
+    select {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Bienvenido a Facil Tramites</h1>
-    <h2>La forma fácil de realizar tus trámites en línea</h2>
-    <p>En Facil Tramites, nos esforzamos por hacer que tus trámites en línea sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus trámites de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procesos burocráticos.</p>
+    <h2>La forma fácil de realizar tus solicitudes en línea</h2>
+    <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus solicitudes de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procedimientos.</p>
     <img src="https://picsum.photos/300/200" alt="Imagen de personas felices con documentos diligenciados">
-    <p>Si necesitas ayuda con tus trámites, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
+    <p>Si necesitas ayuda con tus solicitudes, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
     <h2>Formulario de contacto</h2>
-    <p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su trámite.</p>
+    <p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su solicitud.</p>
     <form>
       <label>Nombre:</label>
-      <input type="text" name="nombre"><br><br>
+      <input type="text" name="nombre"><br>
       <label>Correo electrónico:</label>
-      <input type="email" name="correo"><br><br>
-      <label>Tipo de trámite:</label>
-      <select name="tramite">
-        <option value="tramite1">Trámite 1</option>
-        <option value="tramite2">Trámite 2</option>
-        <option value="tramite3">Trámite 3</option>
-      </select><br><br>
+      <input type="email" name="correo"><br>
+      <label>Tipo de solicitud:</label>
+      <select name="solicitud">
+        <option value="licencia">Licencia de conducción</option>
+        <option value="registro">Registro de vehículo</option>
+        <option value="permiso">Permiso de circulación</option>
+        <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
+      </select><br>
       <label>País:</label>
       <select name="pais" id="pais">
         <option value="co" data-indicativo="+57">Colombia</option>
@@ -124,13 +134,13 @@
         <option value="ec" data-indicativo="+593">Ecuador</option>
         <option value="ar" data-indicativo="+54">Argentina</option>
         <option value="cl" data-indicativo="+56">Chile</option>
-      </select><br><br>
+      </select><br>
       <label>Número de celular:</label>
       <input type="text" id="indicativo" readonly>
-      <input type="text" name="celular" id="celular" maxlength="10"><br><br>
+      <input type="text" name="celular" id="celular" maxlength="10"><br>
       <label>Mensaje:</label>
-      <textarea name="mensaje"></textarea><br><br>
-      <input type="submit" value="Enviar mensaje">
+      <textarea name="mensaje"></textarea><br>
+      <input type="submit" value="Enviar solicitud">
     </form>
     <script>
       const paisSelect = document.getElementById('pais');

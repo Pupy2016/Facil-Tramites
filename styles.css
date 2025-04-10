@@ -1,132 +1,154 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #2E4053;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
 }
 
-.logo {
-  width: 100px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #2E4053;
-  text-align: center;
-  line-height: 100px;
-  font-size: 24px;
-  font-family: 'Great Vibes', cursive;
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-nav {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
+header nav ul li {
+    margin-right: 20px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+header nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
-nav li {
-  display: inline-block;
-  margin-right: 20px;
+#hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
-nav a {
-  color: #fff; 
-  text-decoration: none;
+#hero h1 {
+    font-size: 48px;
 }
 
-nav a:hover {
-  color: #ccc;
+#hero p {
+    font-size: 18px;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+#hero button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.hero {
-  background-image: url('hero.jpg');
-  background-size: cover;
-  background-position: center; 
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+#servicios {
+    background-color: #f7f7f7;
+    padding: 2em;
 }
 
-.hero h1 {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px;
+#servicios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+#servicios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.hero button {
-  background-color: #2E4053;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#servicios li {
+    margin-bottom: 10px;
 }
 
-.formulario {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#beneficios {
+    background-color: #fff;
+    padding: 2em;
 }
 
-.formulario h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+#beneficios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.formulario form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+#beneficios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.formulario label {
-  font-size: 18px;
-  margin-bottom: 10px;
+#beneficios li {
+    margin-bottom: 10px;
 }
 
-.formulario input,.formulario select,.formulario textarea {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+#testimonios {
+    background-color: #f7f7f7;
+    padding: 2em;
 }
 
-.formulario button {
-  background-color: #2E4053;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+#testimonios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#testimonios blockquote {
+    margin-bottom: 20px;
+}
+
+#testimonios cite {
+    font-size: 18px;
+    color: #666;
+}
+
+#contacto {
+    background-color: #fff;
+    padding: 2em;
+}
+
+#contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contacto form {
+    margin-top: 20px;
+}
+
+#contacto input, #contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#contacto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
 }

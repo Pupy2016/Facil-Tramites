@@ -118,3 +118,34 @@
   </script>
 </body>
 </html>
+<form>
+  <label>Nombre:</label>
+  <input type="text" name="nombre" required pattern="[a-zA-Z\s]+">
+  <label>Correo electrónico:</label>
+  <input type="email" name="correo" required>
+  <label>Tipo de solicitud:</label>
+  <select name="solicitud" required>
+    <option value="">Seleccione una opción</option>
+    <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
+    <option value="licencia-de-conducir">Licencia de conducir</option>
+    <option value="registro-de-vehiculo">Registro de vehículo</option>
+    <option value="permiso-de-circulacion">Permiso de circulación</option>
+  </select>
+  <label>País:</label>
+  <select name="pais" required>
+    <option value="">Seleccione una opción</option>
+    <option value="co">Colombia</option>
+    <option value="mx">México</option>
+    <option value="us">Estados Unidos</option>
+    <option value="es">España</option>
+    <option value="ve">Venezuela</option>
+    <option value="ec">Ecuador</option>
+    <option value="ar">Argentina</option>
+    <option value="cl">Chile</option>
+  </select>
+  <label>Número de celular:</label>
+  <input type="text" name="celular" required pattern="[0-9\s]+">
+  <label>Mensaje:</label>
+  <textarea name="mensaje" required></textarea>
+  <button>Enviar solicitud</button>
+</form>

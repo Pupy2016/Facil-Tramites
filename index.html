@@ -1,175 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facil Tramites</title>
-  <style>
-    /* Estilos para el logo y el encabezado */
-   .logo {
-      width: 100px;
-      height: 100px;
-      margin: 20px;
-      border-radius: 50%;
-      background-color: #87CEEB;
-      color: #fff;
-      text-align: center;
-      line-height: 100px;
-      font-size: 24px;
-      font-family: 'Great Vibes', cursive;
-    }
-
-    header {
-      background-color: #F7F7F7;
-      color: #333;
-      padding: 20px;
-      text-align: center;
-    }
-
-    /* Estilos para el cuerpo de la página */
-    body {
-      font-family: Arial, sans-serif;
-      background-image: linear-gradient(to bottom, #F7F7F7, #FFFFFF);
-      background-size: cover;
-      background-attachment: fixed;
-    }
-
-    /* Estilos para la imagen de fondo */
-    img {
-      width: 300px;
-      height: 200px;
-      margin: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-image: url('https://picsum.photos/300/200?blur');
-    }
-
-    /* Estilos para el formulario */
-    form {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      width: 500px;
-      margin: 0 auto;
-    }
-
-    /* Estilos para el contenido principal */
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      background-color: #F7F7F7;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Estilos para los títulos y párrafos */
-    main h2 {
-      margin-bottom: 10px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #f1c40f;
-    }
-
-    main p {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 20px;
-      text-align: justify;
-      width: 80%;
-    }
-
-    /* Estilos para los enlaces y botones */
-    a {
-      text-decoration: none;
-      color: #337ab7;
-    }
-
-    a:hover {
-      color: #23527c;
-    }
-
-    input[type="submit"] {
-      width: 100%;
-      height: 30px;
-      background-color: #2ecc71;
-      color: #fff;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.2s ease-in-out;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #1abc9c;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="logo">FT</div>
-    <h1>Facil Tramites</h1>
+    <div class="logo">
+      <img src="logo.png" alt="Logo de Facil Tramites">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
-  <nav>
-    <ul>
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#">Servicios</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
   <main>
-    <h2>Bienvenido a Facil Tramites</h2>
-    <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible. Nuestra plataforma está diseñada para que puedas realizar tus solicitudes de manera segura y eficiente, sin tener que preocuparte por la complejidad de los procedimientos.</p>
-    <img src="https://picsum.photos/300/200?blur" alt="Imagen de personas felices con documentos en sus manos">
-    <p>Si necesitas ayuda con tus solicitudes, puedes visitar nuestra <a href="https://www.faciltramites.com/ayuda">página de ayuda</a> para obtener más información.</p>
-    <h2>Formulario de contacto</h2>
-    <p>Por favor, complete el formulario a continuación para que podamos ayudarlo con su solicitud.</p>
-    <form>
-      <label>Nombre:</label>
-      <input type="text" name="nombre"><br>
-      <label>Correo electrónico:</label>
-      <input type="email" name="correo"><br>
-      <label>Tipo de solicitud:</label>
-      <select name="solicitud">
-        <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
-        <option value="licencia-de-conducir">Licencia de conducir</option>
-        <option value="registro-de-vehiculo">Registro de vehículo</option>
-        <option value="permiso-de-circulacion">Permiso de circulación</option>
-      </select><br>
-      <label>País:</label>
-      <select name="pais" id="pais">
-        <option value="co" data-indicativo="+57">Colombia</option>
-        <option value="mx" data-indicativo="+52">México</option>
-        <option value="us" data-indicativo="+1">Estados Unidos</option>
-        <option value="es" data-indicativo="+34">España</option>
-        <option value="ve" data-indicativo="+58">Venezuela</option>
-        <option value="ec" data-indicativo="+593">Ecuador</option>
-        <option value="ar" data-indicativo="+54">Argentina</option>
-        <option value="cl" data-indicativo="+56">Chile</option>
-      </select><br>
-      <label>Número de celular:</label>
-      <input type="text" id="indicativo" readonly> 
-      <input type="text" name="celular" id="celular" maxlength="10"><br>
-      <label>Mensaje:</label>
-      <textarea name="mensaje"></textarea><br>
-      <input type="submit" value="Enviar solicitud">
-    </form>
+    <section class="hero">
+      <h1>Bienvenido a Facil Tramites</h1>
+      <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible.</p>
+      <button>Conoce más</button>
+    </section>
+    <section class="formulario">
+      <h2>Formulario de contacto</h2>
+      <form>
+        <label>Nombre:</label>
+        <input type="text" name="nombre">
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo">
+        <label>Tipo de solicitud:</label>
+        <select name="solicitud">
+          <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
+          <option value="licencia-de-conducir">Licencia de conducir</option>
+          <option value="registro-de-vehiculo">Registro de vehículo</option>
+          <option value="permiso-de-circulacion">Permiso de circulación</option>
+        </select>
+        <label>País:</label>
+        <select name="pais">
+          <option value="co">Colombia</option>
+          <option value="mx">México</option>
+          <option value="us">Estados Unidos</option>
+          <option value="es">España</option>
+          <option value="ve">Venezuela</option>
+          <option value="ec">Ecuador</option>
+          <option value="ar">Argentina</option>
+          <option value="cl">Chile</option>
+        </select>
+        <label>Número de celular:</label>
+        <input type="text" name="celular">
+        <label>Mensaje:</label>
+        <textarea name="mensaje"></textarea>
+        <button>Enviar solicitud</button>
+      </form>
+    </section>
   </main>
-  <script>
-    const paisSelect = document.getElementById('pais');
-    const indicativoInput = document.getElementById('indicativo');
-    const celularInput = document.getElementById('celular');
-
-    paisSelect.addEventListener('change', (e) => {
-      const paisSeleccionado = e.target.value;
-      const indicativo = e.target.options[e.target.selectedIndex].getAttribute('data-indicativo');
-      indicativoInput.value = indicativo;
-    });
-
-    indicativoInput.value = paisSelect.options[paisSelect.selectedIndex].getAttribute('data-indicativo');
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

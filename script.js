@@ -1,76 +1,154 @@
-const formulario = document.querySelector('form');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-formulario.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const nombre = document.querySelector('input[name="nombre"]').value;
-  const correo = document.querySelector('input[name="correo"]').value;
-  const solicitud = document.querySelector('select[name="solicitud"]').value;
-  const pais = document.querySelector('select[name="pais"]').value;
-  const celular = document.querySelector('input[name="celular"]').value;
-  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
 
-  // Enviar la información al servidor
-  fetch('/enviar-solicitud', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      nombre,
-      correo,
-      solicitud,
-      pais,
-      celular,
-      mensaje
-    })
-  })
-.then((response) => response.json())
-.then((data) => console.log(data))
-.catch((error) => console.error(error));
-});
-const formulario = document.querySelector('form');
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 
-formulario.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const nombre = document.querySelector('input[name="nombre"]').value;
-  const correo = document.querySelector('input[name="correo"]').value;
-  const solicitud = document.querySelector('select[name="solicitud"]').value;
-  const pais = document.querySelector('select[name="pais"]').value;
-  const celular = document.querySelector('input[name="celular"]').value;
-  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+header nav ul li {
+    margin-right: 20px;
+}
 
-  if (nombre === '' || correo === '' || solicitud === '' || pais === '' || celular === '' || mensaje === '') {
-    alert('Por favor, complete todos los campos');
-    return;
-  }
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
 
-  // Validar patrones de los campos
-  if (!/[a-zA-Z\s]+/.test(nombre)) {
-    alert('El nombre solo puede contener letras y espacios');
-    return;
-  }
+#hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
 
-  if (!/[0-9\s]+/.test(celular)) {
-    alert('El número de celular solo puede contener números y espacios');
-    return;
-  }
+#hero h1 {
+    font-size: 48px;
+}
 
-  // Enviar el formulario si todo está válido
-  fetch('/enviar-solicitud', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      nombre,
-      correo,
-      solicitud,
-      pais,
-      celular,
-      mensaje
-    })
-  })
-.then((response) => response.json())
-.then((data) => console.log(data))
-.catch((error) => console.error(error));
-});
+#hero p {
+    font-size: 18px;
+}
+
+#hero button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#servicios {
+    background-color: #f7f7f7;
+    padding: 2em;
+}
+
+#servicios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#servicios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#servicios li {
+    margin-bottom: 10px;
+}
+
+#beneficios {
+    background-color: #fff;
+    padding: 2em;
+}
+
+#beneficios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#beneficios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#beneficios li {
+    margin-bottom: 10px;
+}
+
+#testimonios {
+    background-color: #f7f7f7;
+    padding: 2em;
+}
+
+#testimonios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#testimonios blockquote {
+    margin-bottom: 20px;
+}
+
+#testimonios cite {
+    font-size: 18px;
+    color: #666;
+}
+
+#contacto {
+    background-color: #fff;
+    padding: 2em;
+}
+
+#contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#contacto form {
+    margin-top: 20px;
+}
+
+#contacto input, #contacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+}
+
+#contacto button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}

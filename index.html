@@ -1,151 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Facil Tramites</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-    h1 {
-      color: #00698f;
-    }
-    h2 {
-      color: #666;
-    }
-   .formulario {
-      background-color: #fff;
-      padding: 20px;
-      border: 1px solid #ddd;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-   .formulario label {
-      color: #666;
-    }
-   .formulario input,.formulario select,.formulario textarea {
-      width: 100%;
-      height: 40px;
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facil Tramites</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo de Facil Tramites">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1>Bienvenido a Facil Tramites</h1>
-      <p>En Facil Tramites, nos esforzamos por hacer que tus procesos sean lo más sencillos y rápidos posible.</p>
-      <button>Conoce más</button>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h1>Facil Tramites</h1>
+        <p>Obtén tus tramites de manera fácil y rápida</p>
+        <button>Comenzar</button>
     </section>
-    <section class="formulario">
-      <h2>Formulario de contacto</h2>
-      <form>
-        <label>Nombre:</label>
-        <input type="text" name="nombre">
-        <label>Correo electrónico:</label>
-        <input type="email" name="correo">
-        <label>Tipo de solicitud:</label>
-        <select name="solicitud">
-          <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
-          <option value="licencia-de-conducir">Licencia de conducir</option>
-          <option value="registro-de-vehiculo">Registro de vehículo</option>
-          <option value="permiso-de-circulacion">Permiso de circulación</option>
-        </select>
-        <label>País:</label>
-        <select name="pais">
-          <option value="co">Colombia</option>
-          <option value="mx">México</option>
-          <option value="us">Estados Unidos</option>
-          <option value="es">España</option>
-          <option value="ve">Venezuela</option>
-          <option value="ec">Ecuador</option>
-          <option value="ar">Argentina</option>
-          <option value="cl">Chile</option>
-        </select>
-        <label>Número de celular:</label>
-        <input type="text" name="celular">
-        <label>Mensaje:</label>
-        <textarea name="mensaje"></textarea>
-        <button>Enviar solicitud</button>
-      </form>
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <ul>
+            <li>Tramites de pasaporte</li>
+            <li>Tramites de visa</li>
+            <li>Tramites de cédula</li>
+        </ul>
     </section>
-  </main>
-  <script>
-    const formulario = document.querySelector('form');
-    formulario.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nombre = document.querySelector('input[name="nombre"]').value;
-      const correo = document.querySelector('input[name="correo"]').value;
-      const solicitud = document.querySelector('select[name="solicitud"]').value;
-      const pais = document.querySelector('select[name="pais"]').value;
-      const celular = document.querySelector('input[name="celular"]').value;
-      const mensaje = document.querySelector('textarea[name="mensaje"]').value;
-      fetch('/enviar-solicitud', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          nombre,
-          correo,
-          solicitud,
-          pais,
-          celular,
-          mensaje
-        })
-      })
-   .then((response) => response.json())
-   .then((data) => console.log(data))
-   .catch((error) => console.error(error));
-    });
-  </script>
+    <section id="beneficios">
+        <h2>Beneficios</h2>
+        <ul>
+            <li>Ahorro de tiempo</li>
+            <li>Ahorro de dinero</li>
+            <li>Conveniencia</li>
+        </ul>
+    </section>
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <blockquote>
+            <p>Facil Tramites me ayudó a obtener mi pasaporte en solo 3 días</p>
+            <cite> Juan Perez</cite>
+        </blockquote>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, por favor contactanos</p>
+        <form>
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo electrónico">
+            <textarea placeholder="Mensaje"></textarea>
+            <button>Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Facil Tramites</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-<form>
-  <label>Nombre:</label>
-  <input type="text" name="nombre" required pattern="[a-zA-Z\s]+">
-  <label>Correo electrónico:</label>
-  <input type="email" name="correo" required>
-  <label>Tipo de solicitud:</label>
-  <select name="solicitud" required>
-    <option value="">Seleccione una opción</option>
-    <option value="soat">SOAT (Seguro Obligatorio de Accidentes de Tránsito)</option>
-    <option value="licencia-de-conducir">Licencia de conducir</option>
-    <option value="registro-de-vehiculo">Registro de vehículo</option>
-    <option value="permiso-de-circulacion">Permiso de circulación</option>
-  </select>
-  <label>País:</label>
-  <select name="pais" required>
-    <option value="">Seleccione una opción</option>
-    <option value="co">Colombia</option>
-    <option value="mx">México</option>
-    <option value="us">Estados Unidos</option>
-    <option value="es">España</option>
-    <option value="ve">Venezuela</option>
-    <option value="ec">Ecuador</option>
-    <option value="ar">Argentina</option>
-    <option value="cl">Chile</option>
-  </select>
-  <label>Número de celular:</label>
-  <input type="text" name="celular" required pattern="[0-9\s]+">
-  <label>Mensaje:</label>
-  <textarea name="mensaje" required></textarea>
-  <button>Enviar solicitud</button>
-</form>

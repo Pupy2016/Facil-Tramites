@@ -4,8 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Facil Tramites</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    h1 {
+      color: #00698f;
+    }
+    h2 {
+      color: #666;
+    }
+   .formulario {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+   .formulario label {
+      color: #666;
+    }
+   .formulario input,.formulario select,.formulario textarea {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -59,6 +87,34 @@
       </form>
     </section>
   </main>
-  <script src="script.js"></script>
+  <script>
+    const formulario = document.querySelector('form');
+    formulario.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nombre = document.querySelector('input[name="nombre"]').value;
+      const correo = document.querySelector('input[name="correo"]').value;
+      const solicitud = document.querySelector('select[name="solicitud"]').value;
+      const pais = document.querySelector('select[name="pais"]').value;
+      const celular = document.querySelector('input[name="celular"]').value;
+      const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+      fetch('/enviar-solicitud', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          nombre,
+          correo,
+          solicitud,
+          pais,
+          celular,
+          mensaje
+        })
+      })
+   .then((response) => response.json())
+   .then((data) => console.log(data))
+   .catch((error) => console.error(error));
+    });
+  </script>
 </body>
 </html>

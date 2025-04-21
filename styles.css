@@ -114,23 +114,41 @@ button {
 
 button:hover {
     background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-li {
-    margin-bottom: 10px;
+button:hover {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
-a {
-    text-decoration: none;
-    color: #333;
+.seccion {
+  transition: opacity 0.5s ease-in-out;
 }
 
-a:hover {
-    color: #444;
+.seccion.active {
+  opacity: 1;
+}
+
+.seccion.inactive {
+  opacity: 0;
 }

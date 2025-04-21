@@ -1,71 +1,99 @@
-// Agrega un evento de click al botón de comenzar
-document.querySelector('#hero button').addEventListener('click', function() {
-    // Redirige al usuario a la sección de servicios
-    window.location.href = '#servicios';
-});
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-// Agrega un evento de submit al formulario de contacto
-document.querySelector('#contacto form').addEventListener('submit', function(event) {
-    // Evita que el formulario se envíe por defecto
-    event.preventDefault();
-    // Obtiene los valores del formulario
-    var nombre = document.querySelector('#contacto input[name="nombre"]').value;
-    var correo = document.querySelector('#contacto input[name="correo"]').value;
-    var mensaje = document.querySelector('#contacto textarea').value;
-    
-    // Envía el formulario mediante AJAX
-    fetch('/contacto', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            nombre: nombre,
-            correo: correo,
-            mensaje: mensaje
-        })
-    })
-   .then(response => response.json())
-   .then(data => {
-        // Muestra un mensaje de éxito
-        alert('Formulario enviado con éxito');
-        // Limpia el formulario
-        document.querySelector('#contacto form').reset();
-    })
-   .catch(error => {
-        // Muestra un mensaje de error
-        alert('Error al enviar el formulario');
-        console.error(error);
-    });
-});
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
 
-// Agrega un evento de scroll para mostrar el botón de subir
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    if (scrollPosition > 200) {
-        document.querySelector('#subir').style.display = 'block';
-    } else {
-        document.querySelector('#subir').style.display = 'none';
-    }
-});
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
 
-// Agrega un evento de click al botón de subir
-document.querySelector('#subir').addEventListener('click', function() {
-    // Sube al usuario a la parte superior de la página
-    window.scrollTo(0, 0);
-});
-// Agrega un evento de scroll para mostrar el botón de subir
-window.addEventListener('scroll', function() {
-    var scrollPosition = window.scrollY;
-    if (scrollPosition > 200) {
-        document.querySelector('#subir').style.display = 'block';
-    } else {
-        document.querySelector('#subir').style.display = 'none';
-    }
-});
+header nav ul li {
+    margin-right: 20px;
+}
 
-// Agrega un evento de click al botón de subir
-document.querySelector('#subir').addEventListener('click', function() {
-    // Sube al usuario a la parte superior de la página
-    window.scrollTo(0, 0);
-});
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#hero {
+    background-image: url('https://via.placeholder.com/800x400');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 48px;
+}
+
+#hero p {
+    font-size: 18px;
+}
+
+#servicios, #beneficios, #testimonios, #contacto {
+    padding: 2em;
+}
+
+#servicios h2, #beneficios h2, #testimonios h2, #contacto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#servicios ul, #beneficios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#servicios li, #beneficios li {
+    margin-bottom: 10px;
+}
+
+#testimonios blockquote {
+    margin-bottom: 20px;
+}
+
+#testimonios cite {
+    font-size: 18px;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}

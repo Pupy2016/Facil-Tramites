@@ -1,7 +1,7 @@
-// Agrega un evento de click al botón de comenzar
-document.querySelector('header button').addEventListener('click', function() {
-    // Redirige al usuario a la sección de servicios
-    window.location.href = '#servicios';
+// Agrega un evento de click al botón de obtener cotización
+document.querySelector('.hero button').addEventListener('click', function() {
+    // Redirige al usuario a la sección de beneficios
+    window.location.href = '#beneficios';
 });
 
 // Agrega un evento de scroll para mostrar el botón de subir

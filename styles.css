@@ -71,7 +71,7 @@ header nav a {
 }
 
 .como-funciona h2 {
-    font-size: 24px;
+    font-size: 24px; 
     margin-bottom: 10px;
 }
 
@@ -85,70 +85,4 @@ header nav a {
     padding: 0;
 }
 
-.como-funciona li {
-    margin-bottom: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    clear: both;
-    display: none;
-}
-
-footer p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #444;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #444;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.seccion {
-  transition: opacity 0.5s ease-in-out;
-}
-
-.seccion.active {
-  opacity: 1;
-}
-
-.seccion.inactive {
-  opacity: 0;
-}
+.com

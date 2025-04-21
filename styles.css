@@ -29,7 +29,7 @@ header nav a {
 }
 
 #hero {
-    background-image: url('hero.jpg');
+    background-image: url('https://via.placeholder.com/800x400');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -47,62 +47,22 @@ header nav a {
     font-size: 18px;
 }
 
-#hero button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#servicios {
-    background-color: #f7f7f7;
+#servicios, #beneficios, #testimonios, #contacto {
     padding: 2em;
 }
 
-#servicios h2 {
+#servicios h2, #beneficios h2, #testimonios h2, #contacto h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-#servicios ul {
+#servicios ul, #beneficios ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#servicios li {
-    margin-bottom: 10px;
-}
-
-#beneficios {
-    background-color: #fff;
-    padding: 2em;
-}
-
-#beneficios h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#beneficios ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#beneficios li {
-    margin-bottom: 10px;
-}
-
-#testimonios {
-    background-color: #f7f7f7;
-    padding: 2em;
-}
-
-#testimonios h2 {
-    font-size: 24px;
+#servicios li, #beneficios li {
     margin-bottom: 10px;
 }
 
@@ -115,36 +75,6 @@ header nav a {
     color: #666;
 }
 
-#contacto {
-    background-color: #fff;
-    padding: 2em;
-}
-
-#contacto h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#contacto form {
-    margin-top: 20px;
-}
-
-#contacto input, #contacto textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-}
-
-#contacto button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -152,19 +82,18 @@ footer {
     text-align: center;
     clear: both;
 }
-#subir {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#subir:hover {
-    background-color: #444;
+footer ul li {
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }

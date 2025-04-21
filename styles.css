@@ -28,7 +28,7 @@ header nav a {
     text-decoration: none;
 }
 
-#hero {
+.hero {
     background-image: url('https://via.placeholder.com/800x400');
     background-size: cover;
     background-position: center;
@@ -39,40 +39,54 @@ header nav a {
     color: #fff;
 }
 
-#hero h1 {
+.hero h1 {
     font-size: 48px;
 }
 
-#hero p {
+.hero p {
     font-size: 18px;
 }
 
-#servicios, #beneficios, #testimonios, #contacto {
+.beneficios {
     padding: 2em;
 }
 
-#servicios h2, #beneficios h2, #testimonios h2, #contacto h2 {
+.beneficios h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-#servicios ul, #beneficios ul {
+.beneficios ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#servicios li, #beneficios li {
+.beneficios li {
     margin-bottom: 10px;
 }
 
-#testimonios blockquote {
-    margin-bottom: 20px;
+.como-funciona {
+    padding: 2em;
 }
 
-#testimonios cite {
+.como-funciona h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.como-funciona p {
     font-size: 18px;
-    color: #666;
+}
+
+.como-funciona ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.como-funciona li {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -81,19 +95,42 @@ footer {
     padding: 1em;
     text-align: center;
     clear: both;
+    display: none;
 }
 
-footer ul {
+footer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-footer ul li {
-    margin-right: 20px;
+li {
+    margin-bottom: 10px;
 }
 
-footer a {
-    color: #fff;
+a {
     text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #444;
 }

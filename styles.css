@@ -85,4 +85,79 @@ header nav a {
     padding: 0;
 }
 
-.com
+.como-funciona li {
+    margin-bottom: 10px;
+}
+
+.testimonios {
+    padding: 2em;
+}
+
+.testimonios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.testimonios ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.testimonios li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+
+footer p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.seccion {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.seccion.active {
+    opacity: 1;
+}
+
+.seccion.inactive {
+    opacity: 0;
+}

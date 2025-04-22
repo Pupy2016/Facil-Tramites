@@ -14,8 +14,4 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Agrega un evento de click al botón de subir
-document.querySelector('footer').addEventListener('click', function() {
-    // Sube al usuario a la parte superior de la página
-    window.scrollTo(0, 0);
-});
+// Agrega un evento de click

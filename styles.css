@@ -89,25 +89,6 @@ header nav a {
     margin-bottom: 10px;
 }
 
-.testimonios {
-    padding: 2em;
-}
-
-.testimonios h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.testimonios ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.testimonios li {
-    margin-bottom: 10px;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -119,90 +100,4 @@ footer {
 footer p {
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-footer li {
-    margin-bottom: 10px;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #444;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-.seccion {
-    transition: opacity 0.5s ease-in-out;
-}
-
-.seccion.active {
-    opacity: 1;
-}
-
-.seccion.inactive {
-    opacity: 0;
-}
-
-/* Agregamos estilos para la sección de testimonios */
-.testimonios blockquote {
-    font-size: 18px;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonios cite {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Agregamos estilos para la sección de beneficios */
-.beneficios li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.beneficios li::before {
-    content: "\2022";
-    font-size: 24px;
-    color: #333;
-    margin-right: 10px;
-}
-
-/* Agregamos estilos para la sección de cómo funciona */
-.como-funciona ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.como-funciona li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.como-funciona li::before {
-    content: "\2713";
-    font-size: 24px;
-    color: #333;
-    margin-right: 10px;
 }
